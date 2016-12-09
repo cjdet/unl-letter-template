@@ -1,0 +1,42 @@
+% Hey, Emacs! This is a -*- LaTeX -*- file!
+%
+% Originally created by Carrick Detweiler in 2013 for UNL letterhead
+% with modifications from others incorporated along the way.
+
+
+\documentclass[11pt]{article}
+
+% This is another way to do it with a pdf or to check that it works
+%\usepackage{wallpaper}
+%\ULCornerWallPaper{1}{unl.pdf}
+
+\input{unl-letter-template-latex.inc}
+
+\renewcommand\UNLtoname{John Appleseed}
+\renewcommand\UNLtoaddress{ADDRESS LINE 1\\ADDRESS LINE 2}
+\renewcommand\UNLdate{\today}
+
+
+\renewcommand\UNLfromname{Jane Doe}
+\renewcommand\UNLfromtitle{RANK (e.g. Assistant Professor)}
+\renewcommand\UNLfromdegree{Ph.D.}
+\renewcommand\UNLfromdept{MY DEPARTMENT}
+\renewcommand\UNLBuildingAddress{OFFICE NUMBER AND BUILDING}
+\renewcommand\UNLfromtel{(402) 472-NUMBER}
+\renewcommand\UNLfromfax{(402) 472-7767} %CSE dept fax
+\renewcommand\UNLfromemail{\url{EMAIL@unl.edu}}
+\renewcommand\UNLfromweb{\url{http://WEBSITE}}
+% Update the next line to the correct path of an image with your
+% signature if you want it to be signed or leave blank for no sig
+%\renewcommand\UNLsignaturefile{signature}
+\renewcommand\UNLsignaturefile{}
+\renewcommand\UNLenclosure{}
+
+
+
+\begin{document}
+\thispagestyle{letterhead}
+
+SAMPLE LETTER
+
+\end{document}
