@@ -4,6 +4,7 @@
 % http://tex.stackexchange.com/questions/837/pdf-letterhead-as-document-background
 %
 % But changed by Carrick Detweiler in 2013 for UNL letterhead
+% Changed again in 2020 for new UNL template
 
 
 
@@ -11,7 +12,7 @@
 %\usepackage[top=2in,left=1.5in,bottom=0.5in,right=0.625in]{geometry}
 % works (below)
 %\usepackage[top=2in,left=1in,bottom=1.2in,right=0.8in]{geometry}
-\usepackage[top=1in,left=1in,bottom=1.2in,right=0.8in]{geometry}
+\usepackage[top=1in,left=.75in,bottom=1.2in,right=0.75in]{geometry}
 %\usepackage{fullpage}
 \usepackage{graphicx}
 \usepackage[colorlinks=false,
@@ -21,6 +22,8 @@
 \usepackage{ifthen}
 \usepackage{soul}
 
+%Arial font
+\usepackage{helvet}
 
 % --- For placement of the horizontal line
 \usepackage{tikz}
@@ -37,15 +40,15 @@
 \providecommand\UNLfromname{NAME}
 \providecommand\UNLfromtitle{RANK (e.g. Associate Professor)}
 \providecommand\UNLfromdegree{Ph.D.}
-\providecommand\UNLfromdept{Computer Science and Engineering}
+\providecommand\UNLfootertitle{\UNLfromname, \UNLfromtitle} 
+\providecommand\UNLfromdept{Department of Computer Science and Engineering}
 \providecommand\UNLfromuniv{University of Nebraska-Lincoln}
-\providecommand\UNLBuildingAddress{UNL BUILDING}
-\providecommand\UNLfromaddress{\UNLfromname\ \textbullet\ \UNLBuildingAddress\  \textbullet\ Lincoln, NE 68588 }
-%\providecommand\UNLfromaddress{NAME \textbullet\ BUILDING ADDRESS \textbullet\ Lincoln, NE 68588 }
-\providecommand\UNLfromtel{(402) 472-NUMBER}
-\providecommand\UNLfromfax{(402) 472-7767}
+\providecommand\UNLBuildingAddress{256 Avery Hall}
+\providecommand\UNLcityzip{Lincoln, NE 68588}
+\providecommand\UNLfromtel{402.472.NUMBER}
+\providecommand\UNLfromfax{(402) 472-7767} %CSE dept fax
 \providecommand\UNLfromemail{\url{EMAIL@cse.unl.edu}}
-\providecommand\UNLfromweb{\url{http://cse.unl.edu/~WEBSITE}}
+\providecommand\UNLfromweb{\url{cse.unl.edu}}
 \providecommand\UNLtoname{use \textbackslash{}renewcommand\textbackslash{}UNLtoname\{toname\}}
 \providecommand\UNLtoaddress{use \textbackslash{}renewcommand\textbackslash{}UNLtoaddress\{address\}}
 \providecommand\UNLdate{\today}
@@ -54,6 +57,7 @@
 % Update this and the next line to the correct path
 \providecommand\UNLsignaturefile{signature}
 \providecommand\UNLlogofile{UNLlogo}
+\providecommand\UNLNfile{Nebraska_N_4c}
 \providecommand\UNLenclosure{}
 
 \usepackage{fancyhdr}
@@ -62,36 +66,36 @@
 \fancypagestyle{letterhead}{
 \renewcommand{\footrulewidth}{0pt}
 \fancyfoot{}
-\fancyfoot[C]{%
-    {
-    \footnotesize\color{black}\sffamily
-    \UNLfromaddress\\[-0.1\baselineskip]
-    \UNLfromtel\ \textbullet\ Fax: \UNLfromfax\ \textbullet\ \UNLfromemail\ \textbullet\ \UNLfromweb}\color{black}
+\fancyfoot[L]{%
+    \begin{textblock*}{2in}[0.530,0.912](1.77in,10.47in)
+        \includegraphics[width=1.2in]{\UNLlogofile}
+    \end{textblock*}
+    \begin{textblock*}{5in}(2.0in,10.1in)
+      \tiny \sffamily
+      \UNLfootertitle \\
+            \vspace{.02in}
+      {\bf \UNLfromdept} \\
+            \vspace{.02in}
+      \UNLBuildingAddress ~~$\vert$~~ \UNLcityzip ~~$\vert$~~ \UNLfromtel ~~$\vert$~~ \UNLfromemail\\
+            \vspace{.02in}
+      \UNLfromweb
+    \end{textblock*}
     }
 
 \fancyhead{}
 \fancyhead[L]{%
-    \begin{textblock*}{2in}[0.530,0.912](1.5in,1.33in)
-        \includegraphics[width=1.8in]{\UNLlogofile}
+    \begin{textblock*}{2in}[0.530,0.912](4.885in,1.185in)
+        \includegraphics[height=.75in]{\UNLNfile}
     \end{textblock*}
-    \begin{textblock*}{6.375in}(1.65in,1.12in) 
-        \footnotesize \sffamily
-        \hfill \UNLfromname, \UNLfromdegree \\
-        \hfill \UNLfromtitle  \\
-        \vspace{.05in}
-        \hfill \color{black} \UNLfromdept
-    \end{textblock*}
-    \begin{tikzpicture}[remember picture,overlay]
-        \draw[color=black,line width=0.5pt] (current page.north west)+(1.5in,-1.42in) -- ($(-0.47in,-1.42in)+(current page.north east)$);
-    \end{tikzpicture}}
-\renewcommand{\headrulewidth}{0pt}
+}
+    \renewcommand{\headrulewidth}{0pt}
 }
 
 \AtBeginDocument{
 %    \newgeometry{top=2in,left=1in,bottom=1.2in,right=0.8in}
 
   \mbox{ }
-    \vspace{.8in}
+    \vspace{.25in}
 
     \UNLdate
 

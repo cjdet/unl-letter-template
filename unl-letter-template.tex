@@ -8,7 +8,10 @@
 
 % This is another way to do it with a pdf or to check that it works
 %\usepackage{wallpaper}
-%\ULCornerWallPaper{1}{unl.pdf}
+%\ULCornerWallPaper{1}{COE-CSE-letterhead.pdf}
+
+%To add the random text
+\usepackage{lipsum}
 
 \input{unl-letter-template-latex.inc}
 
@@ -18,14 +21,11 @@
 
 
 \renewcommand\UNLfromname{Jane Doe}
-\renewcommand\UNLfromtitle{RANK (e.g. Assistant Professor)}
-\renewcommand\UNLfromdegree{Ph.D.}
-\renewcommand\UNLfromdept{MY DEPARTMENT}
+\renewcommand\UNLfromtitle{Best Ever Professor}
 \renewcommand\UNLBuildingAddress{OFFICE NUMBER AND BUILDING}
-\renewcommand\UNLfromtel{(402) 472-NUMBER}
-\renewcommand\UNLfromfax{(402) 472-7767} %CSE dept fax
+\renewcommand\UNLfromtel{402.472.NUMBER}
 \renewcommand\UNLfromemail{\url{EMAIL@unl.edu}}
-\renewcommand\UNLfromweb{\url{http://WEBSITE}}
+\renewcommand\UNLfromweb{\url{WEBSITE}}
 % Update the next line to the correct path of an image with your
 % signature if you want it to be signed or leave blank for no sig
 %\renewcommand\UNLsignaturefile{signature}
@@ -37,6 +37,6 @@
 \begin{document}
 \thispagestyle{letterhead}
 
-SAMPLE LETTER
+\lipsum[2-8]
 
 \end{document}
