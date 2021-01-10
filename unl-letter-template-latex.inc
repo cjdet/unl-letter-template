@@ -56,6 +56,7 @@
 \providecommand\UNLclosing{Sincerely}
 % Update this and the next line to the correct path
 \providecommand\UNLsignaturefile{signature}
+\providecommand\UNLsignaturewidth{2in}
 \providecommand\UNLlogofile{UNLlogo}
 \providecommand\UNLNfile{Nebraska_N_4c}
 \providecommand\UNLenclosure{}
@@ -111,7 +112,7 @@
     \par\vspace{2ex}
     \UNLclosing,
 
-    \ifthenelse{\equal{\UNLsignaturefile}{}}{\bigskip\bigskip}{\vspace{-.1in}\includegraphics[width=2in]{\UNLsignaturefile}\vspace{-.1in}}
+    \ifthenelse{\equal{\UNLsignaturefile}{}}{\bigskip\bigskip}{\vspace{-.1in}\includegraphics[width=\UNLsignaturewidth]{\UNLsignaturefile}\vspace{-.1in}}
 
     \UNLfromname \\
     \UNLfromtitle \\
