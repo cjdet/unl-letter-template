@@ -41,14 +41,14 @@
 \providecommand\UNLfromtitle{RANK (e.g. Associate Professor)}
 \providecommand\UNLfromdegree{Ph.D.}
 \providecommand\UNLfootertitle{\UNLfromname, \UNLfromtitle} 
-\providecommand\UNLfromdept{Department of Computer Science and Engineering}
+\providecommand\UNLfromdept{School of Computing}
 \providecommand\UNLfromuniv{University of Nebraska-Lincoln}
 \providecommand\UNLBuildingAddress{256 Avery Hall}
 \providecommand\UNLcityzip{Lincoln, NE 68588}
 \providecommand\UNLfromtel{402.472.NUMBER}
-\providecommand\UNLfromfax{(402) 472-7767} %CSE dept fax
+\providecommand\UNLfromfax{(402) 472-7767} %SOC fax
 \providecommand\UNLfromemail{\url{EMAIL@cse.unl.edu}}
-\providecommand\UNLfromweb{\url{cse.unl.edu}}
+\providecommand\UNLfromweb{\url{computing.unl.edu}}
 \providecommand\UNLtoname{use \textbackslash{}renewcommand\textbackslash{}UNLtoname\{toname\}}
 \providecommand\UNLtoaddress{use \textbackslash{}renewcommand\textbackslash{}UNLtoaddress\{address\}}
 \providecommand\UNLdate{\today}
